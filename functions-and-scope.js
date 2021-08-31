@@ -139,11 +139,47 @@ console.log(averageGradeThree);
 
 // ---- Verwachte uitkomst: 9
 
+// stap 1: eerst 0 declareren waar je het hoogtste nummer in gaat opslaan
+// stap 2: for loop maken om iedere waarde in de array langs te gaan
+// stap 3: als de huidige opgeslagen waarde van grades hoger is dan highestGrade dan die waarde opslaan als nieuwe waarde (en dus hoogste cijfer)
+
+// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+
+let highestGrade0 = 0;
+
+for (let i = 0; i < grades.length; i++) {
+    // als de huidige waarde van grades (grades[i]) hoger is dan mijn huidige opgeslagen waarde
+    // sla dan dat nieuwe cijfer op als hoogste waarde!
+    if (grades[i] > highestGrade0) {
+        highestGrade0 = grades[i];
+    }
+}
+
+console.log(highestGrade0);
+
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+function highestGrade(gradesArray) {
+    let highestGrade = 0;
+
+    for (let i = 0; i < gradesArray.length; i++) {
+        if (gradesArray[i] > highestGrade) {
+            highestGrade = gradesArray[i];
+        }
+    }
+
+return highestGrade;
+}
+
+const highestOne = highestGrade(grades);
+const highestSecond = highestGrade([6, 4, 5])
+const highestThird = highestGrade([8, 9, 4, 6, 10])
+
+console.log(highestOne, highestSecond, highestThird);
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
