@@ -125,8 +125,7 @@ console.log(averageGradeThree);
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
-
+console.log(averageGradeOne.toFixed(2));
 
 /* Bonusopdracht: hoogste cijfer */
 
